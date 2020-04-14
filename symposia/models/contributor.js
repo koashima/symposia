@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const contributorSchema = new mongoose.Schema(
+const contributorSchema = new Schema(
   {
     name: { type: String },
     email: { type: String },
@@ -8,7 +9,7 @@ const contributorSchema = new mongoose.Schema(
     googleId: { type: String },
   },
   {
-    timpestamps: true,
+    timestamps: true,
   }
 );
 

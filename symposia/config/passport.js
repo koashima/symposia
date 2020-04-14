@@ -37,6 +37,6 @@ passport.serializeUser((contributor, done) => {
 
 passport.deserializeUser((id, done) => {
   Contributor.findById(id, (err, contributor) => {
-    done(err, student);
+    done(err, contributor);
   });
 });
