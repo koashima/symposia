@@ -4,7 +4,7 @@ const symposiaCtrl = require('../controllers/symposia');
 
 router.get('/', symposiaCtrl.index);
 router.get('/new', symposiaCtrl.new);
-router.get('/:id', (req, res) => {res.send(`this is chronicle ${req.user.name}`)});
+router.get('/chronicle', symposiaCtrl.chronicle);
 router.post('/', symposiaCtrl.create);
 
 module.exports = router;

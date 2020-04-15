@@ -16,8 +16,9 @@ const index = (req, res, next) => {
     // });
 };
 
-const show = (req, res) => { 
-    Symposium.findById(req.params.id)
+const chronicle = (req, res) => { 
+    Contributor.findById(req.user)
+    res.render('symposia/chronicle', {user: req.user} )
 }
 
 const newSymposium = (req, res) => { 
@@ -31,7 +32,7 @@ const create = (req, res) => {
 
 module.exports = {
   index,
-  show, 
+  chronicle, 
   new: newSymposium, 
   create
 };
