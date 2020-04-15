@@ -8,7 +8,7 @@ const commentSchema = new Schema({
 const postSchema = new Schema({
     post: {
         type: String,
-        required: true
+        required: true, unique: true
     },
     comment: [commentSchema]
 });
@@ -16,7 +16,7 @@ const postSchema = new Schema({
 const symposiumSchema = new Schema({
     name: {
         type: String,
-        required: true
+        required: true,
     },
     post: [postSchema]
 });
