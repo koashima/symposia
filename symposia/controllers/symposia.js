@@ -1,4 +1,4 @@
-const Symposia = require('../models/symposia');
+const Symposium = require('../models/symposium');
 const Contributor = require('../models/contributor');
 
 const index = (req, res, next) => {
@@ -16,7 +16,22 @@ const index = (req, res, next) => {
     });
 };
 
+const show = (req, res) => { 
+    Symposium.findById(req.params.id)
+}
+
+const newSymposium = (req, res) => { 
+
+}
+
+const create = (req, res) => { 
+
+}
+
 
 module.exports = {
   index,
+  show, 
+  new: newSymposium, 
+  create
 };

@@ -13,14 +13,14 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
     'google', 
     {
-    successRedirect: '/symposia',
+    successRedirect: '/chronicle',
     failureRedirect: '/symposia'     
     })
 );
    
 router.get('/logout', (req, res) => {
     req.logout();
-    req.redirect('/symposia');
+    res.redirect('/symposia');
 });
 
 module.exports = router;
