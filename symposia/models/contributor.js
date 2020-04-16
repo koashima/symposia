@@ -7,6 +7,7 @@ const contributorSchema = new Schema(
     email: { type: String },
     avatar: { type: String },
     googleId: { type: String },
+    symposia: {type: Schema.Types.ObjectId, ref: 'Symposium'}
   },
   {
     timestamps: true,
