@@ -18,16 +18,18 @@ const index = (req, res, next) => {
 
 const chronicle = (req, res) => { 
     Contributor.findById(req.user)
-    res.render('symposia/chronicle', {user: req.user} )
-}
+    res.render('symposia/chronicle', {
+        user: req.user,
+    });
+};
 
 const newSymposium = (req, res) => { 
-
-}
+    res.render('symposia/new', {title: 'new symposia', user: req.user});
+};
 
 const create = (req, res) => { 
 
-}
+};
 
 
 module.exports = {

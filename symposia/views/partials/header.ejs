@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />
-    <link rel="stylesheet" href="../../public/stylesheets/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="stylesheets/style.css"/>
     <title>symposia</title>
 </head>
-
 <body>
-    <nav>
-        <div class="ui inverted menu">
-            <a class="item yellow" href="symposia/chronicle">
-                chronicle
-            </a>
-            <a class="item yellow">
-                symposia
-            </a>
-            <a class="item yellow">
-                Friends
-            </a>
-            <div class="right menu">
+    <div class="navbar-fixed">
+        <nav class="amber">
+          <div class="nav-wrapper">
+            <a href="" class="brand-logo left"><i class="material-icons">strikethrough_s</i>ymposia</a>
+            <ul class="right">
+              <li>
+                <a href="/symposia/new" class="">new symposia</a>            
+              </li>
+              <li>
                 <% if (user) { %>
-                    <a  class="ui item yellow" href="/logout"><i></i>Log Out</a>
+                    <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
                 <% } else { %>
-                    <a class="ui item yellow" href="/auth/google"><i></i>Login with Google</a>
+                    <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
                 <% } %>
-            </div>
-        </div>
-    </nav>
-    <main>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+<main>

@@ -10,16 +10,18 @@ passport.use(
       callbackURL: process.env.GOOGLE_CALLBACK,
     },
     function (accessToken, refreshToken, profile, cb) {
+      console.log(profile);
       Contributor.findOne({ googleId: profile.id }, (err, contributor) => {
         if (err) return cb(err);
         if (contributor) {
           return cb(null, contributor);
         } else {
-          // we have a new student via OAuth!
-          var newContributor = new Contributor({
+          // we have a new contributor via OAuth!
+          const newContributor = new Contributor({
             name: profile.displayName,
             email: profile.emails[0].value,
             googleId: profile.id,
+            avatar: profile.photos[0].value,
           });
           newContributor.save((err) => {
             if (err) return cb(err);
