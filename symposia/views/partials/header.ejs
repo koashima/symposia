@@ -14,16 +14,14 @@
           <div class="nav-wrapper">
             <a href="" class="brand-logo left"><i class="material-icons">strikethrough_s</i>ymposia</a>
             <ul class="right">
-              <li>
-                <a href="/symposia/new" class="">new symposia</a>            
-              </li>
-              <li>
+              <ul>
                 <% if (user) { %>
-                    <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+                  <li> <a href="/symposia/new" class="">new symposia</a></li>             
+                  <li> <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a></li> 
                 <% } else { %>
                     <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
                 <% } %>
-              </li>
+                </ul>
             </ul>
           </div>
         </nav>
