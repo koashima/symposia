@@ -2,8 +2,14 @@
 
 <div class="container">
     <h1 class="text-algin center"><%= title %></h1>
-
-
+    
+    <div class="container">
+    <form id="new-form" action="/movies" method="POST">
+        <label>symposium name:</label>
+        <input type="text" name="name">
+        <input class="align right amber btn" type="submit" value="create symposium">
+      </form>
+    </div>
 </div>
 
 
