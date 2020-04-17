@@ -8,7 +8,7 @@ const commentSchema = new Schema({
 const postSchema = new Schema({
     post: {
         type: String,
-        required: true, unique: true
+        required: true,
     },
     comment: [commentSchema]
 });
@@ -18,7 +18,7 @@ const symposiumSchema = new Schema({
         type: String,
         required: true,
     },
-    post: [postSchema]
+    // post: [postSchema]
 });
 
 module.exports = mongoose.model('Symposium', symposiumSchema)

@@ -28,11 +28,10 @@ const newSymposium = (req, res) => {
 };
 
 const create = (req, res) => { 
-// Contributer.findById(req.user)
     const symposium = new Symposium(req.body);
     symposium.save(function(err) {
-        if (err) return res.redirect('/symposia/new');
-    res.redirect(`/symposia/chronicle/`);
+        if(err) return res.redirect('/symposia/new');
+    res.redirect(`/symposia/chronicle`);
   });
 };
 
