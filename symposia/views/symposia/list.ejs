@@ -10,11 +10,6 @@
                     <a href="/symposia/<%=s._id%>"><%= s.name %></a>              
                 <form action="/symposia/<%= s._id %>?_method=DELETE" method="POST">
                     <button class="btn-small amber right"type="submit">X</button>
-                    <form action="/symposia/<%= s._id %>?_method=PUT" method="POST">
-                        <!-- Value attribute is being set to the comment's current text -->
-                        <input name="text" value="<%= comment.text %>">
-                        <button class="btn amber" type="submit">UPDATE SYMPOSIA</button>
-                    </form>
               </form>
             </td>
             </tr>

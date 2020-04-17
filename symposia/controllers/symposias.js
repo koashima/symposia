@@ -53,6 +53,27 @@ const delsymposium = (req, res) => {
         res.redirect('/symposia/list');
     });
 };
+
+const edit = (req, res) => {
+    Symposium.findById(req.params.id, (err, symposium) => {
+      // console.log("Found Symposium:", symposium);
+      res.render("./symposia/edit.ejs", {user: req.user, symposium});
+      
+    });
+  }
+
+const update = (req, res) => {
+    console.log(req.body);
+    console.log(req.params.id);
+      Symposium.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        { new: true },
+        (err, symposium) => {
+          res.redirect(`/symposia/${symposium._id}`);
+        });
+    };
+
 module.exports = {
   index,
   chronicle, 
@@ -60,5 +81,7 @@ module.exports = {
   create,
   list, 
   show,
-  delsymposium
+  delsymposium,
+  edit,
+  update
 };

@@ -16,5 +16,5 @@ router.get('/list', isAuth, symposiaCtrl.list);
 router.post('')
 router.get('/:id', symposiaCtrl.show);
 router.delete('/:id', symposiaCtrl.delsymposium);
-// router.put('/:id', symposiaCtrl.update);
+router.put('/:id', symposiaCtrl.update);
 module.exports = router;

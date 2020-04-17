@@ -15,7 +15,18 @@
   <button class="btn amber"type="submit">Add Symposium Description</button>
 </form>
 
-<br><br><h3>Comments</h3>
+<div class="container center">
+  <button class="btn amber center">
+    <a id="swag" href="/symposia/<%= symposium._id%>/edit">Edit Symposium Name</a>
+  </button>
+</div>
+
+
+
+<br>
+<br>
+
+<h3>Comments</h3>
 <div class="row">
     <form class="col s12" action="/symposia/<%= symposium._id%>/comments" method="POST">
       <div class="row">
