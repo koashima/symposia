@@ -1,8 +1,11 @@
 <%- include('../partials/header') %>
 
-<form id="update-form" action="/symposia/<%=symposium.id%>?_method=PUT" method="POST">
-  <input type="text" name="name" value="<%=symposium.name%>">
-  <input type="submit" value="Update Symposium Title">
-</form>
+<div class="container center">
+  <form id="update-form" action="/symposia/<%=symposium.id%>?_method=PUT" method="POST">
+    <input type="text" name="name" value="<%=symposium.name%>">
+    <input class="btn amber center" type="submit" value="UPDATE SYMPOSIUM NAME">
+  </form>
+</div>
+
 
 <%- include('../partials/footer') %>
