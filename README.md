@@ -1,8 +1,18 @@
 # SYMPOSIA 
 
-<img src="" title="source: imgur.com" />
+<img src="https://i.imgur.com/UEPv6Mx.png"
+     width=500 
+/>
 
-## INFO
+<img src="https://i.imgur.com/KSdPNoV.png"
+     width=500 
+/>
+<img src="https://i.imgur.com/jp7F55Z.png"
+     width=500 
+/>
+<img src="https://i.imgur.com/gBwu1pI.png"
+     width=500 
+/>
 
  *A convivial discussion* is one definition of symposium (singular of symposia). Symposia is just that, a discussion forum dedicated to making sure your discussions are convivial
 
@@ -19,21 +29,14 @@
 <br>
 
 ## Getting Started
-[click here to engage in war without any of the repurcussions of real war](https://koashima.github.io/war/)
+[click this future link to check out the app in Heroku]()
 
-Click the CHALLENGER deck to start your war with the DEALER
+
 <br>
 
 ## Next Steps
 
-Additional styling including:
-
--  Robust responsive design
-- Fix for rendering Challenger card
--  Overlays for beginning and end of game.
--  Animated card flips
-
-Additional Game Mechanics:
-
-- Add to be able to play until player has no cards remaining.
-
+-  
+- 
+- 
+- 
