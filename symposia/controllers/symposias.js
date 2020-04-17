@@ -46,7 +46,13 @@ const show = (req, res) => {
         res.render('symposia/show', {user: req.user, symposium})
     });
 };
- 
+
+const delsymposium = (req, res) => { 
+    Symposium.findById(req.params.id, (err, symposium) => {
+        symposium.remove();
+        res.redirect('/symposia/list');
+    });
+};
 module.exports = {
   index,
   chronicle, 
@@ -54,4 +60,5 @@ module.exports = {
   create,
   list, 
   show,
+  delsymposium
 };
