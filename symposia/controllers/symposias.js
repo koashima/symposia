@@ -41,11 +41,16 @@ const list = (req, res) => {
     });
 };
 
+const show = (req, res) => {
+    Symposium.findById(req.params.id)
+    res.render('symposia/show', {user: req.user, symposium})
+};
  
 module.exports = {
   index,
   chronicle, 
   new: newSymposium, 
   create,
-  list
+  list, 
+  show,
 };

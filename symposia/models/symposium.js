@@ -18,7 +18,7 @@ const symposiumSchema = new Schema({
         type: String,
         required: true,
     },
-    // post: [postSchema]
+    post: [{type: Schema.Types.ObjectId, ref: 'Post'}]
 });
 
 module.exports = mongoose.model('Symposium', symposiumSchema)
