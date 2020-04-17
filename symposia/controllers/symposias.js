@@ -35,10 +35,17 @@ const create = (req, res) => {
   });
 };
 
+const list = (req, res) => { 
+    Symposium.find({}, (err, symposium) => {
+        res.render('symposia/list', {user: req.user, symposium});
+    });
+};
 
+ 
 module.exports = {
   index,
   chronicle, 
   new: newSymposium, 
-  create
+  create,
+  list
 };

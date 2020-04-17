@@ -7,15 +7,9 @@ const isAuth = (req, res, next) => {
 };
 
 router.get('/', symposiaCtrl.index);
-<<<<<<< HEAD
-router.get('/new', symposiaCtrl.new);
-router.post('/chronicle/', symposiaCtrl.create);
-router.get('/chronicle', symposiaCtrl.chronicle);
-
-=======
 router.get('/new', isAuth, symposiaCtrl.new);
 router.get('/chronicle', isAuth, symposiaCtrl.chronicle);
 router.post('/chronicle', symposiaCtrl.create);
->>>>>>> 6d0b9536b13f069fd23a1a28d5d409da815c6ef7
+router.get('/list', symposiaCtrl.list);
 
 module.exports = router;

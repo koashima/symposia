@@ -4,5 +4,6 @@ body {
 }
 
 a {
-color: rgb(22, 22, 22);
+  color: #ffa000;
+  font-size: 3rem;
 }
